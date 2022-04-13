@@ -1,14 +1,19 @@
 def calculatePay():
     
-    # This first line is provided for you
-    hrs = float(input('Enter Hours: '))
-    rate = float(input('Enter Rate: '))
-    if hrs > 40:
-        pay = (40*rate)+(hrs-40)*rate*1.5
-    else:
-        pay = hrs*rate
+    try:
+        hours = int(input('Enter Hours: '))
+        rate = float(input('Enter Rate: '))
+    except:
+        print('Error, please enter numeric input')
+        quit()
+        
+    if hours > 40:
+        extra_time = int(hours - 40) * 1.5 * 10
+        gross_pay = (hours * rate) + extra_time
+    else :
+        gross_pay = hours * rate
 
-    print('Pay: ' + str(pay))
+    print(gross_pay)
     # end assignment
 
 ## if you want to test locally before you try to sync
