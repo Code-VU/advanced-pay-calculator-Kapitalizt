@@ -13,11 +13,11 @@ def calculatePay():
     else :
         gross_pay = hours * rate
 
-    print(gross_pay)
+    print("Pay: "+str(gross_pay))
     # end assignment
 
 ## if you want to test locally before you try to sync
 ## uncomment calculatePay() and run > python payCalculator.py
 ## ***IMPORTANT*** please recomment before you submit/sync your assignment.
 ## OR YOUR TEST WILL NOT RUN
-# calculatePay()
+calculatePay()
